@@ -1,20 +1,20 @@
 {% set name = "jill" %}
-{% set version = "0.11.5" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jill-{{ version }}.tar.gz
-  sha256: 0e2a3d02b8656b8fb5698f9acdc02204c855c68ad34b88dc0787ad8d349b6b51
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jill-{{ version }}.tar.gz
+  sha256: d9f969823f1e23975ad7335189fc7d577bd8f11bb164f9a39bf1b92405618aab
 
 build:
   entry_points:
     - jill=jill.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
